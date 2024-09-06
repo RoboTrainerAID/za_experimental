@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+	<include file="$(find robotrainer_bringup)/robot/test_description.launch">
+		<arg name="file_name" default="robotrainer2"/>
+		<arg name="gui" default="false"/>
+		<arg name="only_gui" default="false"/>
+	</include>
+
+	<!-- You could do gui=true but then the default .rviz config is loaded. -->
+	<!-- I want to load a custom one wihtout changing the original repo, thats why I have to manually launch joint_sate_publisher and rviz here -->
+
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+		<param name="use_gui" value="true"/>
+	</node>
+
+	<node name='rviz' pkg="rviz" type="rviz" args="-d $(find za_experimental)/config/show_urdf.rviz" />
+
+</launch>

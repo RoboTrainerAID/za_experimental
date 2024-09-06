@@ -1,0 +1,28 @@
+<package format="2">
+  <name>za_experimental</name>
+  <version>0.1.0</version>
+  <description>This package provides launch files for starting Robotrainer simulation</description>
+
+  <license>Apache 2.0</license>
+
+  <!-- <url type="website">http://ros.org/wiki/cob_bringup_sim</url> -->
+  <!-- <url type="bugtracker"></url> -->
+
+  <maintainer email="felixmessmer@gmail.com">Felix Messmer</maintainer>
+  <author email="fxm@ipa.fhg.de">Felix Messmer</author>
+  <author email="nhg@ipa.fhg.de">Nadia Hammoudeh Garcia</author>
+  <author email="fmw@ipa.fhg.de">Florian Weisshardt</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- <exec_depend>cob_default_env_config</exec_depend>
+  <exec_depend>cob_default_robot_config</exec_depend>
+  <exec_depend>cob_gazebo_worlds</exec_depend>
+  <exec_depend>cob_gazebo</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend> -->
+
+  <!-- <test_depend>cob_default_env_config</test_depend>
+  <test_depend>cob_supported_robots</test_depend>
+  <test_depend>roslaunch</test_depend> -->
+
+</package>

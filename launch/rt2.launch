@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find robotrainer_bringup)/robot/rt2.launch">
+        <arg name="robot_env" default="$(optenv ROBOT_ENV ipr-robotrainer-v2)"/>
+        <arg name="sim" default="false"/>
+        <arg name="fts_sim" default="false"/>
+        <arg name="RT2_ip" default="141.3.80.80"/>
+        <arg name="robotrainer_controller" default="fts_controller"/>
+        <!-- <arg name="controllers_to_load" default=""/> -->
+        <arg name="controllers_to_load" default="twist_controller"/>
+        <arg name="robotrainer_controller_yaml" default="rt2_base_controller.yaml"/>
+        <arg name="robotrainer_modalities_yaml" default="modalities.yaml" />
+        <arg name="mapping" default="false"/>
+        
+        <arg name="enable_leg_tracking" default="false"/>
+    </include>
+
+</launch>
