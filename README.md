@@ -1,4 +1,39 @@
 # ZA Experimental for Robotrainer v3
+Build only this package
+```bash
+# shortcut for workspace src folder
+ws
+cd ..
+catkin build za_experimental
+source devel/setup.bash
+```
+
+## How to launch
+```bash
+# Autostart
+# State_publisher + Laserscanner + Diagnostics + FTS.launch + Teleop
+
+# LED + phidgets + battery
+srt 
+
+# RQT with node list service call and errors
+roslaunch za_experimental rqt.launch
+
+# RVIZ with TF + Laser + Map + Model
+roslaunch za_experimental rviz.launch
+# roslaunch za_experimental rviz.launch standalone:=true
+
+# Controller + AMCL + Map_server + Driver
+# entspricht rt2_adaptive
+roslaunch za_experimental rt2.launch
+
+# Init drivers
+rt2_init
+
+# Recover drivers from emergency
+rt2_recover
+```
+
 
 ```bash
 rosrun plotjuggler PlotJuggler
@@ -77,9 +112,9 @@ rosservice call /base/driver/init
 
 ```bash
 roslaunch robotrainer_bringup rt2_mapping.launch
-rosrun map_server map_saver -f iras
-# Copy generated files to path:
-# ~/workspace/ros_ws_melodic_robotrainer/src/cob_environments/cob_default_env_config/iras
+# Save generated files to path:
+cd ~/workspace/ros_ws_melodic_robotrainer/src/cob_environments/cob_default_env_config/iras
+rosrun map_server map_saver -f map
 ```
 
 ## Call Action with GUI
@@ -228,54 +263,3 @@ rqt
 - -b cpu_monitor_str_repair https://github.com/KITrobotics/cob_command_tools.git
 - -b towards_melodic https://github.com/KITrobotics/cob_extern.git
 
-## Errors with Drive Modules
-- Previous error from which i was able to recover by restarting the driver node and call again /base/driver/init
-- EMCY: 82#20FF050000000000
-- The following error can not be recovered and is persistent over power cycle:
-- [ ] What is device error: system:125
-- [ ] Find hardware documentation of drive module (IPA rob@work)
-- [ ] manually setting a parameter to reset errors: rosparam set /base/driver/reset_errors_before_recover true
-- [ ] Send error acknowledge
-```log
-[ INFO] [1725895447.799150001]: Initializing XXX
-[ INFO] [1725895447.799357288]: Current state: 1 device error: system:0 internal_error: 0 (OK)
-[ INFO] [1725895447.799508350]: Current state: 2 device error: system:0 internal_error: 0 (OK)
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-EMCY: 84#10FF815500000000
-[ INFO] [1725895453.677851276]: Current state: 2 device error: system:125 internal_error: 0 (OK)
-[ INFO] [1725895453.677932408]: Current state: 0 device error: system:125 internal_error: 0 (OK)
-[ INFO] [1725895453.677968536]: Current state: 0 device error: system:0 internal_error: 0 (OK)
-[ INFO] [1725895453.678006870]: Current state: 0 device error: system:0 internal_error: 0 (OK)
-```

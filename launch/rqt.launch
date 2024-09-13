@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+  <node type="rqt_gui" name="rqt" pkg="rqt_gui" args="--perspective-file $(find za_experimental)/config/robotrainer.perspective" />
+</launch>
