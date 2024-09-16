@@ -53,7 +53,7 @@ roslaunch za_experimental simulation.launch
 Show urdf in rviz
 ```bash
 # roslaunch robotrainer_bringup test_description.launch
-roslaunch za_experimental rviz_urdf.launch
+roslaunch za_experimental rviz.launch
 ```
 
 Start RT2
@@ -123,6 +123,40 @@ rosrun map_server map_saver -f map
 rosrun actionlib axclient.py /name_of_the_action
 ```
 
+## Erkenntnisse from .bash_history
+
+```bash
+# Why do I need to set sync signal?
+grep set_digital .bash_history 
+grep phidgets set_digital
+rosservice list | grep phidgets
+rosservice call /phidgets/base_monitor/set_digital "uri: 'external_sync'
+state: 1" 
+rosservice call /phidgets/base_monitor/set_digital "uri: 'sync_signal'
+state: 1" 
+rosservice call /phidgets/base_monitor/set_digital "uri: 'sync_signal'
+state: 0" 
+
+# What is this used for? Calls sca sync signal and deviation/reset
+rt2_call_start_services
+
+# -> Both sync and deviation reset are automatically called from user_study_manager.py which is launched by alias user_study_manager
+
+# In the folder .RoboTrainer there are status files
+cat /home/robotrainer/.RoboTrainer/study_manager_status.status
+
+# Commands for one evaluation session
+srt
+user_study_manager
+eval_record_cam_bg
+rt2_camera
+eval_record_base_bg
+roscds
+rt2_adaptive
+rt2_performance
+rosservice call /base/driver/init
+```
+
 ## Commands as alias
 from [./robotrainer/robotrainer_config/scripts/command_aliases.bash](../robotrainer/robotrainer_config/scripts/command_aliases.bash)
 ```bash
@@ -141,6 +175,12 @@ alias kin_rt2_11='rosservice call /robotrainer_hw/set_state "{angular_key: 1, li
 alias kin_rt2_14='rosservice call /robotrainer_hw/set_state "{angular_key: 1, linear_key: 4}"'
 alias kin_rt2_51='rosservice call /robotrainer_hw/set_state "{angular_key: 5, linear_key: 1}"'
 alias kin_rt2_54='rosservice call /robotrainer_hw/set_state "{angular_key: 5, linear_key: 4}"'
+
+alias eval_record_base_bg="bash `rospack find robotrainer_config`/scripts/record_bag_in_background.bash .RoboTrainer/study_record_base.status `rospack find robotrainer_config`/scripts/record_base_values.bash ~/RT2_Data/RoSy_Eval/"
+
+alias eval_record_cam_bg="bash `rospack find robotrainer_config`/scripts/record_bag_in_background.bash .RoboTrainer/study_record_cam.status `rospack find robotrainer_config`/scripts/record_camera_values.bash ~/RT2_Data/RoSy_Eval/Cams"
+
+alias rt2_call_start_services="rosservice call /rt2_sca_sync_node/send_sync_signal_1s \"{}\" & rosservice call /robotrainer_deviation/reset \"{}\""
 ```
 
 ## Autostart
@@ -241,7 +281,7 @@ newgrp video
 
 ## Launch RoboTrainer v2 on device
 From: [robotrainer/README.md](../robotrainer/README.md)
-```
+```bash
 rosparam load src/robotrainer_parameters/yamls/demo_scenario.yaml
 rosparam load src/robotrainer_bringup/configs/modalities.yaml
 
