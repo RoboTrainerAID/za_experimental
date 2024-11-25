@@ -6,10 +6,18 @@
         <arg name="sim" default="false"/>
         <arg name="fts_sim" default="false"/>
         <arg name="RT2_ip" default="141.3.80.80"/>
+
         <arg name="robotrainer_controller" default="fts_adaptive_force_controller"/>
+        <!-- <arg name="robotrainer_controller" default="fts_controller"/> -->
+        <!-- <arg name="robotrainer_controller" default="integral_compare_controller"/> -->
+
+        <arg name="robotrainer_controller_yaml" default="rt2_adaptive_force_controller_za_experimental.yaml"/>
+        <!-- <arg name="robotrainer_controller_yaml" default="rt2_base_controller.yaml"/> -->
+        <!-- <arg name="robotrainer_controller_yaml" default="robotrainer_integral_compare.yaml"/> -->
+        <!-- <arg name="robotrainer_controller_yaml" default="robotrainer_passive_controller.yaml"/> -->
+
         <!-- <arg name="controllers_to_load" default=""/> -->
         <arg name="controllers_to_load" default="twist_controller"/>
-        <arg name="robotrainer_controller_yaml" default="rt2_adaptive_force_controller.yaml"/>
         <arg name="robotrainer_modalities_yaml" default="modalities.yaml" />
         <arg name="mapping" default="false"/>
         <arg name="enable_leg_tracking" default="true"/>
