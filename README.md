@@ -3,7 +3,6 @@ Build only this package
 ```bash
 # shortcut for workspace src folder
 ws
-cd ..
 catkin build za_experimental
 source devel/setup.bash
 ```
@@ -11,13 +10,13 @@ source devel/setup.bash
 ## How to launch
 ```bash
 # Autostart
-# State_publisher + Laserscanner + Diagnostics + FTS.launch + Teleop
+# ROS-Master + State_publisher + Laserscanner + Diagnostics + FTS.launch + Teleop
 
 # LED + phidgets + battery
 srt 
 
 # RQT with node list service call and errors
-roslaunch za_experimental rqt.launch
+roslaunch za_experimental rqt_overview.launch
 
 # RVIZ with TF + Laser + Map + Model
 roslaunch za_experimental rviz.launch
@@ -32,6 +31,32 @@ rt2_init
 
 # Recover drivers from emergency
 rt2_recover
+
+# Launch cameras
+roslaunch robotrainer_bringup rt2_camera_tracking.launch
+
+# Launch gait estimation?
+```
+
+## How to start controller parameterization
+```bash
+srt
+roslaunch za_experimental rt2.launch
+rt2_init
+roslaunch za_experimental rqt_reconfigure.launch
+# click: activate_force_parameterization
+# follow instructions in console
+# 1. forward
+# 2. left
+# 3. right
+# 4. turn left
+# 5. turn right
+```
+
+## How to start Spatial Control Actions (SCA) or Modalities
+```bash
+# Start panel and data_srv
+roslaunch robotrainer_panel robotrainer.launch
 ```
 
 
