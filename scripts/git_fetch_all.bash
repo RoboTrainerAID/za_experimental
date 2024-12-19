@@ -12,11 +12,14 @@ for dir in */; do
 
         # Check if it is a Git repository
         if [ -d ".git" ]; then
-
             # Check if the specific remote exists
             if git remote | grep -q "robotrainer_github"; then
-                echo "Fetching from 'robotrainer_github' in $dir"
+                # Fetch from the remote
                 git fetch robotrainer_github
+
+                # Output status with colors in a single line
+                echo -e "\e[1mStatus for $dir:"
+                git status -sb
             else
                 echo "Remote 'robotrainer_github' not found in $dir. Skipping."
             fi
