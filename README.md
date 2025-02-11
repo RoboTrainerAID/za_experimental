@@ -36,6 +36,9 @@ rt2_recover
 roslaunch robotrainer_bringup rt2_camera_tracking.launch
 
 # Launch gait estimation?
+
+# Shutdown pc without waiting
+sudo shutdown -h now
 ```
 
 ## How to start controller parameterization
@@ -187,13 +190,13 @@ from [./robotrainer/robotrainer_config/scripts/command_aliases.bash](../robotrai
 ```bash
 ## Commands
 alias srt=`rospack find robotrainer_bringup`/scripts/robotrainer_on_login.bash
-alias start_transport=`rospack find robotrainer_bringup`/scripts/robotrainer_transport.bash
+alias rt2_transport=`rospack find robotrainer_bringup`/scripts/robotrainer_transport.bash
 
 alias rt2_mapping="roslaunch robotrainer_bringup rt2_mapping.launch"
 alias rt2_adaptive="roslaunch robotrainer_bringup rt2_adaptive.launch"
 alias rt2_camera="roslaunch robotrainer_bringup rt2_camera_tracking.launch"
 alias rt2_performance="roslaunch robotrainer_bringup rt2_user_performance.launch"
-alias user_study_manager="roslaunch robotrainer_bringup rt2_user_study_manager.launch"
+alias rt2_user_study_manager="roslaunch robotrainer_bringup rt2_user_study_manager.launch"
 
 ## Kinematics
 alias kin_rt2_11='rosservice call /robotrainer_hw/set_state "{angular_key: 1, linear_key: 1}"'
