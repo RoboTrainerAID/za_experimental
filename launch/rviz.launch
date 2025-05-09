@@ -1,25 +1,11 @@
 <?xml version="1.0"?>
 <launch>
 
-  	<arg name="file_name" default="robotrainer2"/>
   	<arg name="standalone" default="false"/>
 
-	<!-- You could do gui=true but then the default .rviz config is loaded. -->
-	<!-- I want to load a custom one wihtout changing the original repo, thats why I have to manually launch joint_sate_publisher and rviz here -->
-	<!-- <include file="$(find robotrainer_bringup)/robot/test_description.launch">
-		<arg name="file_name" default="robotrainer2"/>
-		<arg name="gui" default="true"/>
-		<arg name="only_gui" default="false"/>
-	</include> -->
-
-  	<param if="$(arg standalone)" name="robot_description" command="$(find xacro)/xacro -i '$(find cob_hardware_config)/robots/robotrainer2/urdf/$(arg file_name).urdf.xacro'"/>
-
-	<!-- robot state publisher -->
-	<node if="$(arg standalone)" pkg="robot_state_publisher" type="robot_state_publisher" name="tool_state_publisher">
-		<param name="publish_frequency" type="double" value="50.0" />
-	</node>
-
-	<node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+	<include if="$(arg standalone)" file="$(find za_experimental)/launch/urdf_standalone.launch" />
+	
+	<node if="$(arg standalone)" name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
 
 	<node name='rviz' pkg="rviz" type="rviz" args="-d $(find za_experimental)/config/show_urdf.rviz" />
 

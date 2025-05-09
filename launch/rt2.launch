@@ -20,7 +20,7 @@
         <arg name="controllers_to_load" default="twist_controller"/>
         <arg name="robotrainer_modalities_yaml" default="modalities.yaml" />
         <arg name="mapping" default="false"/>
-        <arg name="enable_leg_tracking" default="true"/>
+        <arg name="enable_leg_tracking" default="false"/>
     </include>
 
 </launch>
