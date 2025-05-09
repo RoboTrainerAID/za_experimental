@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root version="2.3.8">
+ <tabbed_widget parent="main_window" name="Main Window">
+  <plotmatrix columns="1" tab_name="plot" rows="3">
+   <plot col="0" style="Lines" row="0">
+    <range bottom="-1.046299" left="1.753526" right="45.659760" top="-0.328572"/>
+    <limitY/>
+    <curve B="34" R="188" custom_transform="noTransform" G="189" name="/leg_detection/people_msg_stamped/leg2/position/x"/>
+    <curve B="193" R="241" custom_transform="noTransform" G="76" name="/right_toe/point/x"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="1">
+    <range bottom="-0.410406" left="1.753526" right="45.659760" top="0.682050"/>
+    <limitY/>
+    <curve B="180" R="31" custom_transform="noTransform" G="119" name="/leg_detection/people_msg_stamped/leg2/position/y"/>
+    <curve B="189" R="148" custom_transform="noTransform" G="103" name="/right_toe/point/y"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="2">
+    <range bottom="-0.008656" left="1.753526" right="45.659760" top="0.354911"/>
+    <limitY/>
+    <curve B="40" R="214" custom_transform="noTransform" G="39" name="/leg_detection/people_msg_stamped/leg2/position/z"/>
+    <curve B="207" R="23" custom_transform="noTransform" G="190" name="/right_toe/point/z"/>
+    <transform value="noTransform"/>
+   </plot>
+  </plotmatrix>
+  <plotmatrix columns="1" tab_name="plot" rows="4">
+   <plot col="0" style="Lines" row="0">
+    <range bottom="-1.042363" left="1.753526" right="45.659760" top="-0.301349"/>
+    <limitY/>
+    <curve B="180" R="31" custom_transform="noTransform" G="119" name="/left_toe/point/x"/>
+    <curve B="40" R="214" custom_transform="noTransform" G="39" name="/leg_detection/people_msg_stamped/leg1/position/x"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="1">
+    <range bottom="-0.342809" left="1.753526" right="45.659760" top="0.724203"/>
+    <limitY/>
+    <curve B="193" R="241" custom_transform="noTransform" G="76" name="/left_toe/point/y"/>
+    <curve B="56" R="26" custom_transform="noTransform" G="201" name="/leg_detection/people_msg_stamped/leg1/position/y"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="2">
+    <range bottom="-0.009009" left="1.753526" right="45.659760" top="0.369372"/>
+    <limitY/>
+    <curve B="189" R="148" custom_transform="noTransform" G="103" name="/left_toe/point/z"/>
+    <curve B="14" R="255" custom_transform="noTransform" G="127" name="/leg_detection/people_msg_stamped/leg1/position/z"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="3">
+    <range bottom="-10.315514" left="0.000000" right="46.073544" top="6.339667"/>
+    <limitY/>
+    <curve B="207" R="23" custom_transform="noTransform" G="190" name="/mobile_robot_pose/pose/theta"/>
+    <curve B="193" R="241" custom_transform="noTransform" G="76" name="/mobile_robot_pose/pose/x"/>
+    <curve B="189" R="148" custom_transform="noTransform" G="103" name="/mobile_robot_pose/pose/y"/>
+    <transform value="noTransform"/>
+   </plot>
+  </plotmatrix>
+  <plotmatrix columns="1" tab_name="plot" rows="6">
+   <plot col="0" style="Lines" row="0">
+    <range bottom="-0.019796" left="0.360088" right="34.163746" top="0.811618"/>
+    <limitY/>
+    <curve B="207" R="23" custom_transform="noTransform" G="190" name="/gait/AVG_params/leg1/cadence"/>
+    <curve B="193" R="241" custom_transform="noTransform" G="76" name="/gait/force_params/leg1/cadence"/>
+    <curve B="56" R="26" custom_transform="noTransform" G="201" name="/gait/leg_params/leg1/cadence"/>
+    <curve B="180" R="31" custom_transform="noTransform" G="119" name="/gait/toe_params/leg1/cadence"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="1">
+    <range bottom="-0.036556" left="0.360088" right="34.163746" top="1.498795"/>
+    <limitY/>
+    <curve B="34" R="188" custom_transform="noTransform" G="189" name="/gait/AVG_params/leg1/stance_time"/>
+    <curve B="189" R="148" custom_transform="noTransform" G="103" name="/gait/force_params/leg1/stance_time"/>
+    <curve B="14" R="255" custom_transform="noTransform" G="127" name="/gait/leg_params/leg1/stance_time"/>
+    <curve B="40" R="214" custom_transform="noTransform" G="39" name="/gait/toe_params/leg1/stance_time"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="2">
+    <range bottom="-0.422858" left="0.360088" right="34.163746" top="0.010314"/>
+    <limitY/>
+    <curve B="180" R="31" custom_transform="noTransform" G="119" name="/gait/AVG_params/leg1/step_length"/>
+    <curve B="207" R="23" custom_transform="noTransform" G="190" name="/gait/force_params/leg1/step_length"/>
+    <curve B="56" R="26" custom_transform="noTransform" G="201" name="/gait/leg_params/leg1/step_length"/>
+    <curve B="14" R="255" custom_transform="noTransform" G="127" name="/gait/toe_params/leg1/step_length"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="3">
+    <range bottom="-0.061432" left="0.360088" right="34.163746" top="2.518714"/>
+    <limitY/>
+    <curve B="40" R="214" custom_transform="noTransform" G="39" name="/gait/AVG_params/leg1/stride_intervall"/>
+    <curve B="34" R="188" custom_transform="noTransform" G="189" name="/gait/force_params/leg1/stride_intervall"/>
+    <curve B="193" R="241" custom_transform="noTransform" G="76" name="/gait/leg_params/leg1/stride_intervall"/>
+    <curve B="56" R="26" custom_transform="noTransform" G="201" name="/gait/toe_params/leg1/stride_intervall"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="4">
+    <range bottom="-0.030303" left="0.360088" right="34.163746" top="1.242442"/>
+    <limitY/>
+    <curve B="56" R="26" custom_transform="noTransform" G="201" name="/gait/AVG_params/leg1/stride_length"/>
+    <curve B="180" R="31" custom_transform="noTransform" G="119" name="/gait/force_params/leg1/stride_length"/>
+    <curve B="189" R="148" custom_transform="noTransform" G="103" name="/gait/leg_params/leg1/stride_length"/>
+    <curve B="207" R="23" custom_transform="noTransform" G="190" name="/gait/toe_params/leg1/stride_length"/>
+    <transform value="noTransform"/>
+   </plot>
+   <plot col="0" style="Lines" row="5">
+    <range bottom="-0.015792" left="0.360088" right="34.163746" top="0.647484"/>
+    <limitY/>
+    <curve B="14" R="255" custom_transform="noTransform" G="127" name="/gait/AVG_params/leg1/swing_time"/>
+    <curve B="40" R="214" custom_transform="noTransform" G="39" name="/gait/force_params/leg1/swing_time"/>
+    <curve B="34" R="188" custom_transform="noTransform" G="189" name="/gait/leg_params/leg1/swing_time"/>
+    <curve B="14" R="255" custom_transform="noTransform" G="127" name="/gait/toe_params/leg1/swing_time"/>
+    <transform value="noTransform"/>
+   </plot>
+  </plotmatrix>
+  <currentPlotMatrix index="1"/>
+ </tabbed_widget>
+ <use_relative_time_offset enabled="1"/>
+ <!-- - - - - - - - - - - - - - - -->
+ <!-- - - - - - - - - - - - - - - -->
+ <Plugins>
+  <plugin ID="DataLoad CSV">
+   <default time_axis=""/>
+  </plugin>
+  <plugin ID="DataLoad ROS bags">
+   <use_header_stamp value="false"/>
+   <use_renaming_rules value="true"/>
+   <discard_large_arrays value="true"/>
+   <max_array_size value="100"/>
+  </plugin>
+  <plugin ID="DataLoad ULog"/>
+  <plugin ID="ROS Topic Subscriber">
+   <use_header_stamp value="false"/>
+   <use_renaming_rules value="true"/>
+   <discard_large_arrays value="true"/>
+   <max_array_size value="100"/>
+  </plugin>
+  <plugin status="idle" ID="ROS /rosout Visualization"/>
+  <plugin status="idle" ID="ROS Topic Re-Publisher"/>
+ </Plugins>
+ <!-- - - - - - - - - - - - - - - -->
+ <previouslyLoaded_Datafiles>
+  <fileInfo prefix="" filename="/home/robotrainer/workspace/ros_ws_melodic_robotrainer/src/za_experimental/data/gait_data_2025-03-28-16-45-38.bag">
+   <selected_datasources value="/base/fts_adaptive_force_controller/debug/admittance_velocity;/base/fts_adaptive_force_controller/debug/platform_hw_velocity;/base/fts_adaptive_force_controller/debug/velocity_output;/base/velocity_smoother/parameter_descriptions;/base/velocity_smoother/parameter_updates;/gait/AVG_params;/gait/force_band;/gait/force_params;/gait/leg_band;/gait/leg_params;/gait/toe_params;/left_leg;/left_toe;/leg_detection/body_center_stamped;/leg_detection/legs_and_vel_direction;/leg_detection/line_strip;/leg_detection/people;/leg_detection/people_msg_stamped;/leg_detection/posXY_velXY_accXY_lId_pId_conf_fst_leg;/leg_detection/posXY_velXY_accXY_lId_pId_conf_snd_leg;/leg_detection/tracking_area;/leg_detection/tracking_zones;/right_leg;/right_toe;/amcl_pose;/base/force_for_gui;/base/fts_controller/fts_command;/base/odometry_controller/odometry;/base/output_data;/mobile_robot_pose;/mobile_robot_position"/>
+   <plugin ID="DataLoad ROS bags">
+    <use_header_stamp value="false"/>
+    <use_renaming_rules value="true"/>
+    <discard_large_arrays value="true"/>
+    <max_array_size value="100"/>
+   </plugin>
+  </fileInfo>
+ </previouslyLoaded_Datafiles>
+ <!-- - - - - - - - - - - - - - - -->
+ <customMathEquations/>
+ <snippets>
+  <snippet language="JS" name="1st_derivative">
+   <global>var prevX = 0
+var prevY = 0</global>
+   <equation>dx = time - prevX
+dy = value - prevY
+prevX = time
+prevY = value
+
+return dy/dx</equation>
+  </snippet>
+  <snippet language="JS" name="1st_order_lowpass">
+   <global>var prevY = 0
+var alpha = 0.1</global>
+   <equation>prevY = alpha * value + (1.-alpha) * prevY
+
+return prevY</equation>
+  </snippet>
+  <snippet language="JS" name="2D_velocity">
+   <global>var prev_x = 0
+var prev_y = 0
+var prev_t = 0</global>
+   <equation>X = $$your_odometry/position/x$$
+Y = $$your_odometry/position/y$$
+
+var dist = sqrt( (X-prev_x)*(X-prev_x) + (Y-prev_y)*(Y-prev_y) )
+var dT = time - prev_t
+
+prev_x = X
+prev_y = Y
+prev_t = time
+
+return dist / dT</equation>
+  </snippet>
+  <snippet language="JS" name="average_two_curves">
+   <global></global>
+   <equation>a = $$PLOT_A$$
+b = $$PLOT_B$$
+
+return (a+b)/2</equation>
+  </snippet>
+  <snippet language="JS" name="integral">
+   <global>var integral = 0</global>
+   <equation>integral += value
+return integral</equation>
+  </snippet>
+  <snippet language="JS" name="rad_to_deg">
+   <global></global>
+   <equation>return value*180/3.1417</equation>
+  </snippet>
+  <snippet language="JS" name="remove_offset">
+   <global>var is_first = true
+var first_value = 0</global>
+   <equation>if (is_first)
+{
+  is_first = false
+  first_value = value
+}
+
+return value - first_value</equation>
+  </snippet>
+  <snippet language="JS" name="yaw_from_quaternion">
+   <global>// source: https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
+
+function quaternionToYaw(x, y, z, w)
+{
+  // yaw (z-axis rotation)
+  t1 = 2.0 * (w * z + x * y);
+  t2 = 1.0 - 2.0 * (y * y + z * z);
+  yaw = Math.atan2(t1, t2);
+
+  return yaw
+}</global>
+   <equation>return quaternionToYaw(x, y, z, w);</equation>
+  </snippet>
+ </snippets>
+ <!-- - - - - - - - - - - - - - - -->
+</root>
+
