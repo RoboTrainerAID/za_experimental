@@ -1,17 +1,12 @@
 <package format="2">
   <name>za_experimental</name>
   <version>0.1.0</version>
-  <description>This package provides launch files for starting Robotrainer simulation</description>
+  <description>This package contains experimental launch files and alternative configs</description>
 
   <license>Apache 2.0</license>
 
-  <!-- <url type="website">http://ros.org/wiki/cob_bringup_sim</url> -->
-  <!-- <url type="bugtracker"></url> -->
-
-  <maintainer email="felixmessmer@gmail.com">Felix Messmer</maintainer>
-  <author email="fxm@ipa.fhg.de">Felix Messmer</author>
-  <author email="nhg@ipa.fhg.de">Nadia Hammoudeh Garcia</author>
-  <author email="fmw@ipa.fhg.de">Florian Weisshardt</author>
+  <maintainer email="andreas.zachariae@gmail.com">Andreas Zachariae</maintainer>
+  <author email="andreas.zachariae@gmail.com">Andreas Zachariae</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
