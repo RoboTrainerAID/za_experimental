@@ -7,6 +7,6 @@
 	
 	<node if="$(arg standalone)" name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
 
-	<node name='rviz' pkg="rviz" type="rviz" args="-d $(find za_experimental)/config/data.rviz" />
+	<node name='rviz' pkg="rviz" type="rviz" args="-d $(find za_experimental)/config/data_and_scenario.rviz" />
 
 </launch>
