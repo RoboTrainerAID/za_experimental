@@ -5,8 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Scenario1
-      Splitter Ratio: 0.7450593113899231
+      Splitter Ratio: 0.5
     Tree Height: 712
   - Class: rviz/Selection
     Name: Selection
@@ -314,8 +313,6 @@ Visualization Manager:
           Value: false
         fts_reference_link:
           Value: true
-        fts_tool_link:
-          Value: true
         led_rectangle_link:
           Value: true
         lower_legs_camera_depth_frame:
@@ -373,73 +370,70 @@ Visualization Manager:
       Show Names: true
       Tree:
         map:
-          base_link:
-            base_baseplate_link:
-              base_baseplate_bl_chassis_link:
-                base_baseplate_bl_telescope_rot_link:
-                  base_baseplate_bl_telescope_lin_link:
-                    base_baseplate_back_left_wheel_link:
-                      bl_caster_rotation_link:
-                        bl_caster_r_wheel_link:
-                          {}
-              base_baseplate_br_chassis_link:
-                base_baseplate_br_telescope_rot_link:
-                  base_baseplate_br_telescope_lin_link:
-                    base_baseplate_back_right_wheel_link:
-                      br_caster_rotation_link:
-                        br_caster_r_wheel_link:
-                          {}
-              base_baseplate_front_wheel_link:
-                f_caster_rotation_link:
-                  f_caster_r_wheel_link:
-                    {}
-              lower_legs_camera_holder_bottom:
-                lower_legs_camera_fixture:
-                  lower_legs_camera_link:
-                    lower_legs_camera_depth_frame:
-                      lower_legs_camera_depth_optical_frame:
-                        {}
-                    lower_legs_camera_rgb_frame:
-                      lower_legs_camera_rgb_optical_frame:
-                        {}
-              upper_body_camera_holder_bottom:
-                upper_body_camera_fixture:
-                  upper_body_camera_link:
-                    upper_body_camera_depth_frame:
-                      upper_body_camera_depth_optical_frame:
-                        {}
-                    upper_body_camera_realsense_link:
-                      upper_body_camera_realsense_color_frame:
-                        upper_body_camera_realsense_color_optical_frame:
-                          {}
-                      upper_body_camera_realsense_depth_frame:
-                        upper_body_camera_realsense_depth_optical_frame:
-                          {}
-                    upper_body_camera_rgb_frame:
-                      upper_body_camera_rgb_optical_frame:
-                        {}
-            base_laser_back_link:
-              {}
-            base_laser_left_link:
-              {}
-            base_laser_right_link:
-              {}
-            fts_base_link:
-              fts_reference_link:
-                {}
-              fts_tool_link:
-                {}
-            led_rectangle_link:
-              {}
-            robotrainer_front_marker:
-              {}
-            robotrainer_left_marker:
-              {}
-            robotrainer_right_marker:
-              {}
           odom_combined:
             base_footprint:
-              {}
+              base_link:
+                base_baseplate_link:
+                  base_baseplate_bl_chassis_link:
+                    base_baseplate_bl_telescope_rot_link:
+                      base_baseplate_bl_telescope_lin_link:
+                        base_baseplate_back_left_wheel_link:
+                          bl_caster_rotation_link:
+                            bl_caster_r_wheel_link:
+                              {}
+                  base_baseplate_br_chassis_link:
+                    base_baseplate_br_telescope_rot_link:
+                      base_baseplate_br_telescope_lin_link:
+                        base_baseplate_back_right_wheel_link:
+                          br_caster_rotation_link:
+                            br_caster_r_wheel_link:
+                              {}
+                  base_baseplate_front_wheel_link:
+                    f_caster_rotation_link:
+                      f_caster_r_wheel_link:
+                        {}
+                  lower_legs_camera_holder_bottom:
+                    lower_legs_camera_fixture:
+                      lower_legs_camera_link:
+                        lower_legs_camera_depth_frame:
+                          lower_legs_camera_depth_optical_frame:
+                            {}
+                        lower_legs_camera_rgb_frame:
+                          lower_legs_camera_rgb_optical_frame:
+                            {}
+                  upper_body_camera_holder_bottom:
+                    upper_body_camera_fixture:
+                      upper_body_camera_link:
+                        upper_body_camera_depth_frame:
+                          upper_body_camera_depth_optical_frame:
+                            {}
+                        upper_body_camera_realsense_link:
+                          upper_body_camera_realsense_color_frame:
+                            upper_body_camera_realsense_color_optical_frame:
+                              {}
+                          upper_body_camera_realsense_depth_frame:
+                            upper_body_camera_realsense_depth_optical_frame:
+                              {}
+                        upper_body_camera_rgb_frame:
+                          upper_body_camera_rgb_optical_frame:
+                            {}
+                base_laser_back_link:
+                  {}
+                base_laser_left_link:
+                  {}
+                base_laser_right_link:
+                  {}
+                fts_base_link:
+                  fts_reference_link:
+                    {}
+                led_rectangle_link:
+                  {}
+                robotrainer_front_marker:
+                  {}
+                robotrainer_left_marker:
+                  {}
+                robotrainer_right_marker:
+                  {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -661,7 +655,7 @@ Visualization Manager:
       History Length: 5
       Name: PointStamped Left Heelstrike
       Radius: 0.10000000149011612
-      Topic: /gait/left_toe_heelstrike_in_map
+      Topic: /gait/left/raw/HS_in_map_frame
       Unreliable: false
       Value: true
     - Alpha: 0.5
@@ -671,7 +665,7 @@ Visualization Manager:
       History Length: 5
       Name: PointStamped Right Heelstrike
       Radius: 0.10000000149011612
-      Topic: /gait/right_toe_heelstrike_in_map
+      Topic: /gait/right/raw/HS_in_map_frame
       Unreliable: false
       Value: true
     - Class: rviz/MarkerArray
@@ -703,10 +697,7 @@ Visualization Manager:
       Marker Topic: /scenario_publisher/visualization_marker
       Name: Scenario
       Namespaces:
-        force_arrow: true
-        force_circle: true
-        force_text: true
-        path: true
+        {}
       Queue Size: 100
       Value: true
   Enabled: true
@@ -774,4 +765,4 @@ Window Geometry:
     collapsed: true
   Width: 1850
   X: 2630
-  Y: 27
+  Y: 0
