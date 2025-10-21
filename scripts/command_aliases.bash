@@ -5,4 +5,5 @@ alias rt2_git_change_user="source `rospack find za_experimental`/scripts/git_cha
 alias rt2_git_fetch_all="`rospack find za_experimental`/scripts/git_fetch_all.bash"
 alias rt2_battery="`rospack find za_experimental`/scripts/get_battery_charge.bash"
 alias rt2_start_polar="`rospack find robotrainer_study_automatic_assessment`/scripts/start_polar_oh1.bash"
-alias rt2_start_bag="`rospack find robotrainer_study_automatic_assessment`/scripts/record_topics.bash"
+alias rt2_start_bag="`rospack find robotrainer_study_bayesian_optimization`/scripts/record_topics.bash"
+alias rt2_start_bo="cd /home/robotrainer/workspace/docker/robotrainer_docker_bayesian_optimization && ./autostart.sh"
